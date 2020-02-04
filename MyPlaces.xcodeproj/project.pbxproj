@@ -15,6 +15,7 @@
 		5FDBB32E23E823B3005629F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FDBB32C23E823B3005629F0 /* LaunchScreen.storyboard */; };
 		5FDBB33623E85C7A005629F0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBB33523E85C7A005629F0 /* CustomTableViewCell.swift */; };
 		5FDBB33823E88742005629F0 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBB33723E88742005629F0 /* PlaceModel.swift */; };
+		5FDBB33A23E9AFEE005629F0 /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FDBB33923E9AFEE005629F0 /* NewPlaceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5FDBB32F23E823B3005629F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FDBB33523E85C7A005629F0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5FDBB33723E88742005629F0 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		5FDBB33923E9AFEE005629F0 /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		5FDBB31523E823B2005629F0 = {
 			isa = PBXGroup;
 			children = (
+				5FDBB33923E9AFEE005629F0 /* NewPlaceViewController.swift */,
 				5FDBB32023E823B2005629F0 /* MyPlaces */,
 				5FDBB31F23E823B2005629F0 /* Products */,
 			);
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FDBB32623E823B2005629F0 /* MainViewController.swift in Sources */,
+				5FDBB33A23E9AFEE005629F0 /* NewPlaceViewController.swift in Sources */,
 				5FDBB32223E823B2005629F0 /* AppDelegate.swift in Sources */,
 				5FDBB33823E88742005629F0 /* PlaceModel.swift in Sources */,
 				5FDBB33623E85C7A005629F0 /* CustomTableViewCell.swift in Sources */,
