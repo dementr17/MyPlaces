@@ -23,6 +23,9 @@ class NewPlaceViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //esli vibrana 1 yacheyka
         if indexPath.row == 0 {
+          
+            let cameraIcon = #imageLiteral(resourceName: "camera")
+            let photoIcon = #imageLiteral(resourceName: "photo")
             //opredelyaem alert controller i deystviya
             let actionSheet = UIAlertController(title: nil,
                                                 message: nil,
@@ -32,12 +35,15 @@ class NewPlaceViewController: UITableViewController {
                 //metod vizova cameri
                 self.chooseImagePicker(source: .camera)
             }
+            camera.setValue(cameraIcon, forKey: "image")
+            camera.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             
             let photo = UIAlertAction(title: "Photo", style: .default) { _ in
                 //photo
                 self.chooseImagePicker(source: .photoLibrary)
             }
-            
+            photo.setValue(photoIcon, forKey: "image")
+            photo.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             let cancel = UIAlertAction(title: "Cancel", style: .cancel)
             //dobavlyaem deystviya v alert
             actionSheet.addAction(camera)

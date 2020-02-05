@@ -46,7 +46,6 @@
 		5FDBB31523E823B2005629F0 = {
 			isa = PBXGroup;
 			children = (
-				5FDBB33923E9AFEE005629F0 /* NewPlaceViewController.swift */,
 				5FDBB32023E823B2005629F0 /* MyPlaces */,
 				5FDBB31F23E823B2005629F0 /* Products */,
 			);
@@ -63,6 +62,7 @@
 		5FDBB32023E823B2005629F0 /* MyPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				5FDBB33923E9AFEE005629F0 /* NewPlaceViewController.swift */,
 				5FDBB32123E823B2005629F0 /* AppDelegate.swift */,
 				5FDBB32323E823B2005629F0 /* SceneDelegate.swift */,
 				5FDBB32523E823B2005629F0 /* MainViewController.swift */,
