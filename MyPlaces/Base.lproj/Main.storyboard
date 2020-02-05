@@ -97,7 +97,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <inset key="separatorInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                         <sections>
-                            <tableViewSection id="lGi-RR-Hc6">
+                            <tableViewSection headerTitle="" id="lGi-RR-Hc6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="0I5-mz-1Cj">
                                         <rect key="frame" x="0.0" y="28" width="414" height="250"/>
@@ -226,13 +226,21 @@
                     <navigationItem key="navigationItem" title="New Place" id="GSH-Z0-oCV">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="c4u-hh-E24">
                             <connections>
-                                <segue destination="OE7-oc-aXM" kind="unwind" unwindAction="cancelActionWith_segue:" id="MUS-xu-JCj"/>
+                                <action selector="cancelAction:" destination="tqr-Qw-dgH" id="ru7-Ug-LYP"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gU4-a6-gxv"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="gU4-a6-gxv">
+                            <connections>
+                                <segue destination="OE7-oc-aXM" kind="unwind" unwindAction="unwindSegueWith_segue:" id="k5s-Rq-DYI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="imageOfPlace" destination="NPF-oY-egm" id="UuG-Ti-fvZ"/>
+                        <outlet property="placeImage" destination="NPF-oY-egm" id="UuG-Ti-fvZ"/>
+                        <outlet property="placeLocation" destination="7FG-v5-Iaz" id="WiJ-r6-kyo"/>
+                        <outlet property="placeName" destination="pfD-rJ-jjh" id="JoE-aC-2Q1"/>
+                        <outlet property="placeType" destination="sfx-H5-dka" id="LCA-Ma-xkw"/>
+                        <outlet property="saveButton" destination="gU4-a6-gxv" id="2tP-cz-gcM"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cUY-3Q-CIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
