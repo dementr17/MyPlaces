@@ -10,6 +10,8 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
+    @IBOutlet weak var imageOfPlace: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -60,12 +62,14 @@ extension NewPlaceViewController: UITextFieldDelegate {
 }
 
 //rashirenie dlya raboti s izobrazheniyami
-extension NewPlaceViewController {
+extension NewPlaceViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func chooseImagePicker(source: UIImagePickerController.SourceType){
         //proverka na dostupnost istochnika
         if UIImagePickerController.isSourceTypeAvailable(source){
             //sozdaem exzemplyar klassa
             let imagePicker = UIImagePickerController()
+            //назначаем сам класс исполнителем методоа (делегатом)
+            imagePicker.delegate = self
             //teper rabotaem s exz klassa, razreshaem redactirovat pered primeneniem
             imagePicker.allowsEditing = true
             //opredelyaem tip istochnika
@@ -73,5 +77,18 @@ extension NewPlaceViewController {
             //vizov
             present(imagePicker, animated: true)
         }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        imageOfPlace.image = info[.editedImage] as? UIImage
+        //берем значение по ключу editedimage и присваиваем его как uiumage свойству imageofplace
+        imageOfPlace.contentMode = .scaleAspectFill
+        //позволяет масштабировать изображение по содержимого uiimage
+        imageOfPlace.clipsToBounds = true
+        //обрезка по границам uiimage
+        dismiss(animated: true)
+        //закрытие uiimage
+        //теперь выше делегируем исполнение этого метода
     }
 }
